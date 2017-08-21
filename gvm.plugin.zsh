@@ -17,6 +17,7 @@ local fresh_install=0
 [ $fresh_install -eq 1 ] && {
     local all=$(gvm listall | tr -d '^ \t')
     local latest=$(echo $all | \grep -v "rc\|beta\|release\|^$" | tail -1)
+    echo "Installing $latest for gvm..."
     gvm install $latest -B
     gvm use $latest --default
 }
