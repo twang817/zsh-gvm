@@ -7,7 +7,7 @@ local fresh_install=0
     bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
     unset GVM_NO_UPDATE_PROFILE
     fresh_install=1
-}
+} > /dev/null
 
 [[ -s "$GVM_DEST/$GVM_NAME/scripts/gvm" ]] && {
     source $GVM_DEST/$GVM_NAME/scripts/gvm
